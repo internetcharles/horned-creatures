@@ -10,11 +10,11 @@ export default class ImageItem extends Component {
             <div>
                 {this.props.data
                 .filter(creature => {
-                    if(!this.props.keyword) return true;
-                    return creature.keyword === this.props.keyword;
+                    if(!this.props.keyword && !this.props.hornCount) return true;
+                    return creature.horns.toString() === this.props.hornCount && this.props.keyword === creature.keyword;
                 })
                 .map((image) =>
-                    <img src={image.url} />
+                    <img src={image.url} key={image.title} alt={image.title} />
                     )}
             </div>
         )

@@ -6,7 +6,7 @@ export default class ImageList extends Component {
     render() {
         return (
             <div>
-                <ImageItem data={this.props.data} keyword={this.props.keyword} />
+                <ImageItem data={this.props.data} keyword={this.props.keyword} hornCount={this.props.horns} />
             </div>
         )
     }
