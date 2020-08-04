@@ -15,6 +15,7 @@ data.forEach(creature => {
   else { container.push(creature.keyword)
   }
 });
+
 data.forEach(creature => {
   if (hornContainer.includes(creature.horns)) {
     return
@@ -32,8 +33,6 @@ class App extends React.Component {
     this.handleHornChange = this.handleHornChange.bind(this);
 
   }
-  
-
 
   handleChange(event) {
     this.setState({ value: event.target.value })

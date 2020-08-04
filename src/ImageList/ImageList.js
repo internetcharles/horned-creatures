@@ -5,7 +5,7 @@ import ImageItem from './ImageItem'
 export default class ImageList extends Component {
     render() {
         return (
-            <div>
+            <div className="image-box">
                 <ImageItem data={this.props.data} keyword={this.props.keyword} hornCount={this.props.horns} />
             </div>
         )
