@@ -8,12 +8,12 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { value: '', hornCount: data.horns, urls: data.url }
+    this.state = { value: "" }
 
     this.handleChange = this.handleChange.bind(this);
   }
   
-  cunti
+  
 
   handleChange(event) {
     this.setState({ value: event.target.value })
@@ -25,12 +25,15 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <select value={this.state.value} onChange={this.handleChange}>
-            <option value="">Select Horn Count</option>
-            <option value="1">1 Horn</option>
-            <option value="2">2 Horns</option>
+            <option value="" defaultValue>Select Keyword</option>
+            <option value="narwhal">narwhal</option>
+            <option value="rhino">rhino</option>
+            <option value="unicorn">unicorn</option>
+            <option value="triceratops">triceratops</option>
+            <option value="unilego">unilego</option>
         </select>
         <p>horn count: {this.state.value}</p>
-        <ImageList data={data} />
+        <ImageList data={data} keyword={this.state.value} />
       </div>
     );
     }
