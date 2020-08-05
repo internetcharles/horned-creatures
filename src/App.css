@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+img {
+  height: 400px;
+  margin: 20px;
+}
+
+.header {
+  font-size: 50px;
+  margin: 75px;
+  border: double;
+  background-color: aquamarine;
+}
+
+select {
+  font-size: larger;
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+}
